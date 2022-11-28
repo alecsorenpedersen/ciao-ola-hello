@@ -135,19 +135,10 @@ export function CatchBoundary() {
 
 	switch (caught.status) {
 		case 401:
-			message = (
-				<text>
-					Oops! Looks like you tried to visit a page that you do not have access
-					to.
-				</text>
-			);
+			message = <text>401 nope</text>;
 			break;
 		case 404:
-			message = (
-				<text>
-					Oops! Looks like you tried to visit a page that does not exist.
-				</text>
-			);
+			message = <text>404</text>;
 			break;
 
 		default:
