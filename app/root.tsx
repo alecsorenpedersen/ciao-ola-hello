@@ -27,7 +27,6 @@ export const loader: LoaderFunction = async ({ request }) => {
 	const t = await remixI18n.getFixedT(request, 'common');
 	const title = t('headTitle');
 	return json({ locale, title });
-	return request.headers.get('cookie') ?? '';
 };
 
 export const handle = {
@@ -38,7 +37,7 @@ export const handle = {
 
 export const meta: MetaFunction = () => ({
 	charset: 'utf-8',
-	title: 'New Remix App',
+	title: 'ola',
 	viewport: 'width=device-width,initial-scale=1',
 });
 

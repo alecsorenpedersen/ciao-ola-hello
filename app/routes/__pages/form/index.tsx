@@ -16,9 +16,17 @@ import {
 } from '@chakra-ui/react';
 import { useState } from 'react';
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
+import { useTranslation } from 'react-i18next';
+
+export const handle = {
+	// In the handle export, we could add a i18n key with namespaces our route
+	// will need to load. This key can be a single string or an array of strings.
+	i18n: ['index'],
+};
 
 export default function SignupCard() {
 	const [showPassword, setShowPassword] = useState(false);
+	const { t, ready, i18n } = useTranslation('index');
 
 	return (
 		<Flex
